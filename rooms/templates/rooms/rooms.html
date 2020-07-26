@@ -1,0 +1,11 @@
+{% extends "website/base.html" %}
+{% block content %}
+    <h1>Meeting Rooms</h1>
+    {% if rooms %}
+        {% for r in rooms %}
+            {{r.name}}<br/>
+        {% endfor %}
+    {% else %}
+        <p>You have no rooms</p>
+    {% endif %}
+{% endblock content %}
