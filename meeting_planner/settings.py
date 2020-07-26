@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'website',
     'meetings',
     'rooms',
+    'users',
 ]
 
 MIDDLEWARE = [
