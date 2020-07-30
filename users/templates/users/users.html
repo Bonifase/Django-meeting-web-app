@@ -1,0 +1,24 @@
+{% extends "website/base.html" %}
+{% block content %}
+    <h1>Users</h1>
+    <div class="row mt-4">
+    {% if users %}
+        {% for user in users %}
+        <div class="col-md-4">
+            <div class="card mb-4"  style="max-width: 36rem;">
+                <div class="card-body">
+                  <h5 class="card-title">{{user.username}}</h5>
+                  <p class="card-text">{{user.email}}</p>
+                  
+                </div>
+                <div class="card-footer bg-transparent border-bg-light">
+                    <a href="#" class="btn btn-sm btn-primary btn-block">View details</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    {% else %}
+        <p>You have no users</p>
+    {% endif %}
+    </div>  
+{% endblock content %}

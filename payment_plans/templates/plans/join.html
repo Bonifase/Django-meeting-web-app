@@ -1,0 +1,54 @@
+{% extends "website/base.html" %}
+{% block content %}
+<div class="peicing-header px-3 py-3 pt-md-4 max-auto text-center">
+    <h1>Meeting Premium</h1>
+    <p>Schedule a meeting easily</p>
+</div>
+<div class="container">
+    <div class="card-deck mb-3 text-center">
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">Monthly</h4>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title">
+                    $10
+                    <small class="text-muted">/ mo</small>
+                </h1>
+                <ul class="list-unstyled mt-3 nb-4">
+                    <ul>Reserved room</ul>
+                    <ul>Clean room</ul>
+                    <ul>Meeting Equipments</ul>
+                    <ul>Weekly Alerts</ul>
+                </ul>
+                <a href="{% plans:checkout %}?plan=monthly">
+                    <button class="btn btn-large btn-block btn-outline-primary">Get Started</button>
+                </a>
+            </div>
+        </div>
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">
+                    Yearly
+                    <small class="text-primary">Save $20</small>
+                </h4>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title">
+                    %100
+                    <small class="text-muted">/ yr</small>
+                </h1>
+                <ul class="list-unstyled mt-3 nb-4">
+                    <ul>Reserved room</ul>
+                    <ul>Clean room</ul>
+                    <ul>Meeting Equipments</ul>
+                    <ul>Weekly Alerts</ul>
+                </ul>
+                <a href="{% plans:checkout %}?plan=yearly">
+                    <button class="btn btn-large btn-block btn-outline-primary">Get Started</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
